@@ -1,0 +1,10 @@
+<div class="app">
+
+  <label>Iban:</label>
+  <input type="text" [(ngModel)]="iban" [ngClass]="{'is-valid':ibanState, 'is-invalid': !ibanState}">
+  <button (click)="setIban()">Format iban</button>
+  
+  
+  
+  <app-iban [ibanValue]="myIbanValue" (validation)="onValidation($event)"></app-iban>
+</div>

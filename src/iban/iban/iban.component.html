@@ -1,0 +1,8 @@
+<h1 *ngIf="ibanValue">{{ibanValue | iban}}</h1>
+<div>
+    <label for="valid">Valide</label>
+    <input type="radio" id="valid" [(ngModel)]="isValid" [value]="true">
+    <label for="valid">Invalide</label>
+    <input type="radio" id="invalid" [(ngModel)]="isValid" [value]="false" >
+    <button (click)="validateIban()">Valider</button>
+</div>
